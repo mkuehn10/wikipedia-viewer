@@ -1,0 +1,16 @@
+<!doctype html><html lang=""><head><meta charset="utf-8"><meta name="description" content=""><meta name="viewport" content="width=device-width,initial-scale=1"><title>wikipedia viewer</title><link rel="apple-touch-icon" href="apple-touch-icon.png"><!-- Place favicon.ico in the root directory --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="styles/main.css"></head><body><!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]--><div class="container"><div class="row text-center"><div class="col-xs-12"><a href="https://en.wikipedia.org/wiki/Special:Random" target="random"><button class="topButtons btn btn-primary"><i class="fa fa-random"></i> Random Wikipedia Article <i class="fa fa-random"></i></button></a><form data-bind="submit: searchWikipedia"><input id="myInput" data-bind="textInput: searchTerm"> <button type="submit">Search</button></form></div></div><div class="row" data-bind="foreach: wikiResults"><div class="col-xs-12 col-sm-6"><a data-bind="attr: {href: href, target: title}"><div class="result col-xs-12"><h1 data-bind="text: title"></h1><p data-bind="text: description"></p></div></a></div></div></div><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-80275020-1');
+    ga('send', 'pageview');</script><script src="//code.jquery.com/jquery-3.1.0.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script><script src="https://use.fontawesome.com/7e16f9c758.js"></script><script src="scripts/main.js"></script></body></html>
